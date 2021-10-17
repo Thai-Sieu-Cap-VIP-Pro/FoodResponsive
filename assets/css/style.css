@@ -1,0 +1,565 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+h1,
+h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+*::selection {
+    background: var(--yellow);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+section {
+    padding: 1rem 10%;
+    padding-top: 3rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #333;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+}
+
+
+/* phần header */
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 1.5rem 10%;
+    box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 5rem;
+}
+
+.navbar__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__item {
+    margin-left: 3rem;
+}
+
+.navbar__link {
+    font-size: 1.7rem;
+    color: #666;
+    font-weight: 300;
+}
+
+.navbar__link:hover {
+    color: var(--yellow);
+    font-weight: 500;
+}
+
+.active {
+    color: var(--yellow);
+    font-weight: 500;
+}
+
+.menubar__icon {
+    display: none;
+}
+
+.menubar__icon i {
+    color: #666;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+
+/* xong phần header */
+
+
+/* phần home */
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+}
+
+.home .content {
+    flex: 1 1 39rem;
+}
+
+.home .img {
+    flex: 1 1 39rem;
+}
+
+.home .img img {
+    width: 100%;
+}
+
+.home .content h3 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.home .content h3 span {
+    color: var(--yellow);
+}
+
+.home .content p {
+    color: var(--yellow);
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+
+.btn:hover {
+    background: var(--yellow);
+}
+
+.home::after,
+.home::before {
+    content: '';
+    position: absolute;
+    top: 5rem;
+    right: -6rem;
+    background-color: var(--yellow);
+    border-radius: 3rem;
+    transform: rotate(-45deg);
+    height: 40rem;
+    width: 70rem;
+    z-index: -2;
+    animation: anime .5s linear 1;
+}
+
+@keyframes anime {
+    0% {
+        transform: rotate(45deg) translateY(-40rem);
+    }
+}
+
+.home::before {
+    top: -7rem;
+    background-color: #fff;
+    z-index: -1;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+}
+
+
+/* xong phần home */
+
+
+/* phần about */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .img {
+    flex: 1 1 40rem;
+    height: 50rem;
+    background: url(../img/about-frame-img.png), url(../img/about-img.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+}
+
+.about .content {
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+
+.about .content h3 {
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.about .content h3 span {
+    color: var(--yellow);
+}
+
+.about .content p {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    color: #666;
+    font-weight: 300;
+}
+
+.about .content p:last-child {
+    margin-bottom: 3rem;
+}
+
+
+/* xong phần about */
+
+
+/* bắt đầu phần menu */
+
+.menu__heading {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.menu__heading span {
+    color: var(--yellow);
+}
+
+.menu__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 4px dashed rgb(113, 113, 113);
+    border-bottom: 4px dashed rgb(113, 113, 113);
+    margin: 30px 0;
+    padding: 10px 0;
+}
+
+.menu__list li {
+    margin: 10px 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row .image {
+    flex: 1 1 40rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.row .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.row .content {
+    flex: 1 1 60rem;
+    margin: 0 0 0 3rem;
+}
+
+.row .content .info {
+    margin: 10px 0px;
+}
+
+.row .content .info h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.row .content .info h3 .number {
+    margin-right: 10px;
+}
+
+.row .content .info p {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.row .content .info h3 span {
+    color: var(--yellow);
+}
+
+.menu .menu__list .btn.active-btn {
+    background-color: var(--yellow);
+}
+
+
+/* kết thúc phần menu */
+
+
+/* bắt đầu phần popular */
+
+.popular {
+    background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(/assets/img/popular-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.heading {
+    font-size: 4rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.heading span {
+    color: var(--yellow);
+}
+
+.popular .box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.popular .box-container .box {
+    background-color: white;
+    width: 32rem;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.2);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.popular .box-container .box img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.popular .box-container .box h3 {
+    font-size: 3rem;
+    font-weight: normal;
+    color: #333;
+}
+
+.popular .box-container .box .rating i {
+    color: var(--yellow);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.popular .popular .box-container .box .rating i {
+    color: yellow;
+    font-size: 2rem;
+    padding: 1rem .1rem;
+}
+
+.popular .box-container .box .price {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.popular .box-container .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+
+/* end phần popular */
+
+
+/* start phần gallery */
+
+.gallery .box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.gallery .box-container .box {
+    height: 20rem;
+    width: 30rem;
+    margin: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery .box-container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .box-container .box h2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    opacity: 0;
+}
+
+.gallery .box-container .box::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: .2s linear;
+}
+
+.gallery .box-container .box:hover::before {
+    top: 0;
+}
+
+.gallery .box-container .box:hover h2 {
+    opacity: 1;
+    top: 50%;
+    animation-delay: .2s;
+}
+
+
+/* end phần gallery */
+
+
+/* start section order */
+
+.order {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.order .row {
+    display: flex;
+    background: white;
+    margin: 2rem 0;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+}
+
+.order .row form {
+    flex: 1 1 60%;
+    padding: 2rem;
+}
+
+.order .row form .box {
+    width: 100%;
+    background: #f0f0f0;
+    margin: 1rem 0;
+    font-size: 1, 5rem;
+    color: #333;
+    text-transform: none;
+    padding: 1rem;
+}
+
+.order .row .image {
+    flex: 1 1 40%;
+    padding: 1rem;
+    height: 100%;
+}
+
+.order .row .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* end section order */
+
+
+/* start footer section */
+
+.footer {
+    background-color: #666;
+    padding: 1rem 7%;
+}
+
+.footer .box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box {
+    width: 22rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.footer .box-container .box p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+    font-weight: 300;
+}
+
+.footer .box-container .box p i {
+    padding-right: 15px;
+    color: var(--yellow);
+}
+
+.footer .box-container .box a i {
+    padding-right: 15px;
+    color: var(--yellow);
+    font-weight: 100;
+}
+
+.footer .box-container .box a {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+    font-weight: 500;
+    display: block;
+}
+
+.footer .box-container .box a:hover {
+    color: var(--yellow);
+}
+
+.footer .box-container h4 {
+    font-size: 2rem;
+    text-align: center;
+    border-top: .2rem solid var(--yellow);
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    color: white;
+}
+
+.footer .box-container h4 span {
+    color: var(--yellow);
+}
+
+
+/* end footer section */

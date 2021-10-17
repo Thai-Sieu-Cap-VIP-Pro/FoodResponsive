@@ -1,0 +1,113 @@
+/* --------------------------------------------------------trên tablet và điện thoại--------------------------------------------- */
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 55%;
+    }
+    .home::after,
+    .home::before {
+        display: none;
+    }
+    .row {
+        display: block;
+    }
+    .about {
+        display: block;
+    }
+    .home {
+        margin-top: 10rem;
+    }
+    .popular .box-container .box {
+        width: 30rem;
+        margin: 10px 0rem;
+    }
+}
+
+
+/*-------------------------------------------------------- trên table------------------------------------------------------------- */
+
+@media (min-width: 740px) and (max-width:1024px) {
+    .menu__list li {
+        margin: 1rem 5rem;
+        width: 150px;
+        text-align: center;
+    }
+    footer .box-container .box {
+        width: 30rem;
+    }
+}
+
+
+/* -------------------------------------------------------trên điện thoại---------------------------------------------------------------- */
+
+@media (max-width: 739px) {
+    /*xong phần heading */
+    html {
+        font-size: 55%;
+    }
+    .menubar__icon {
+        display: block;
+    }
+    /* custom lại navigation */
+    .navbar {
+        position: fixed;
+        top: 8.2rem;
+        right: 0;
+        left: 0;
+        background: var(--yellow);
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    .navbar__list {
+        flex-flow: column;
+    }
+    .navbar__item {
+        padding: 10px 0;
+        width: 100%;
+    }
+    .navbar__link {
+        color: white;
+        padding-left: 10px;
+        border-left: 1px solid white;
+    }
+    .navbar__link:hover {
+        color: #333;
+        border-color: #333;
+    }
+    .fa-times {
+        transform: rotate(180deg);
+    }
+    .navbar__toggle {
+        transform: scaleY(100%);
+        opacity: 1;
+    }
+    /* end navigation */
+    /*xong phần heading*/
+    .home .content {
+        text-align: center;
+    }
+    .home .content h3,
+    .about .content h3,
+    .menu h3,
+    .popular h1,
+    .gallery h1,
+    .order h1 {
+        font-size: 2.5rem;
+    }
+    .home .content p {
+        font-size: 1.3rem;
+    }
+    .order .row .image {
+        display: none;
+    }
+    .menu__list .btn {
+        width: 150px;
+        text-align: center;
+    }
+    .footer .box p,
+    .footer .box a,
+    .footer .box h3 {
+        text-align: center;
+    }
+}

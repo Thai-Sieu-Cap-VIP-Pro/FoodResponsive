@@ -1,0 +1,13 @@
+:root {
+    --yellow: #F7CA3e;
+}
+
+.btn {
+    font-size: 1.7rem;
+    padding: 0.7rem 4rem;
+    border-radius: 5rem;
+    background: none;
+    color: #333;
+    cursor: pointer;
+    border: 0.2rem solid var(--yellow);
+}
